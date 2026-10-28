@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Bootstrapper/">
+    <Project Path="src/Bootstrapper/ClothingStore.Api/ClothingStore.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Identity/">
+    <Project Path="src/Modules/Identity/ClothingStore.Identity.Api/ClothingStore.Identity.Api.csproj" />
+    <Project Path="src/Modules/Identity/ClothingStore.Identity.Application/ClothingStore.Identity.Application.csproj" />
+    <Project Path="src/Modules/Identity/ClothingStore.Identity.Domain/ClothingStore.Identity.Domain.csproj" />
+    <Project Path="src/Modules/Identity/ClothingStore.Identity.Infrastructure/ClothingStore.Identity.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/ClothingStore.Shared.Api/ClothingStore.Shared.Api.csproj" />
+    <Project Path="src/Shared/ClothingStore.Shared.Application/ClothingStore.Shared.Application.csproj" />
+    <Project Path="src/Shared/ClothingStore.Shared.Domain/ClothingStore.Shared.Domain.csproj" />
+    <Project Path="src/Shared/ClothingStore.Shared.Infrastructure/ClothingStore.Shared.Infrastructure.csproj" />
+  </Folder>
+</Solution>
