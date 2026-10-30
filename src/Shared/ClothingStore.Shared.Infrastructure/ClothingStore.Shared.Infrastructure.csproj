@@ -6,4 +6,22 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.14"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.14">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.14"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ClothingStore.Shared.Application\ClothingStore.Shared.Application.csproj"/>
+        <ProjectReference Include="..\ClothingStore.Shared.Domain\ClothingStore.Shared.Domain.csproj"/>
+    </ItemGroup>
+
 </Project>

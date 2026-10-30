@@ -1,0 +1,9 @@
+﻿GET http://localhost:5000/api/test/public
+
+###
+GET http://localhost:5000/api/test/admin
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+###
+GET http://localhost:5000/api/test/user
+Authorization: Bearer {{ACCESS_TOKEN}}

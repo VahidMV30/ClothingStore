@@ -1,0 +1,14 @@
+﻿global using ClothingStore.Identity.Application.Common.Constants;
+global using ClothingStore.Identity.Application.Common.DTOs;
+global using ClothingStore.Identity.Application.Common.Errors;
+global using ClothingStore.Identity.Application.Common.Messages;
+global using ClothingStore.Identity.Application.Interfaces;
+global using ClothingStore.Identity.Application.Interfaces.Repositories;
+global using ClothingStore.Identity.Application.Interfaces.Services;
+global using ClothingStore.Identity.Domain.Entities;
+global using ClothingStore.Identity.Domain.ValueObjects;
+global using ClothingStore.Shared.Application.Common.CQRS;
+global using ClothingStore.Shared.Application.Interfaces.Repositories;
+global using ErrorOr;
+global using FluentValidation;
+global using MediatR;

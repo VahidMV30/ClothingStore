@@ -1,0 +1,9 @@
+﻿global using System.Linq.Expressions;
+global using System.Reflection;
+global using ClothingStore.Shared.Application.Common.Behaviors;
+global using ErrorOr;
+global using FluentValidation;
+global using MediatR;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Diagnostics;
+global using Microsoft.Extensions.Logging;

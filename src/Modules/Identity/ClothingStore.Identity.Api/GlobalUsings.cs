@@ -1,0 +1,15 @@
+﻿global using Carter;
+global using ClothingStore.Identity.Application.Common.DTOs;
+global using ClothingStore.Identity.Application.Features.Commands.Login;
+global using ClothingStore.Identity.Application.Features.Commands.Refresh;
+global using ClothingStore.Identity.Application.Features.Commands.Register;
+global using ClothingStore.Identity.Infrastructure;
+global using ClothingStore.Shared.Api.Extensions;
+global using MediatR;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Routing;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using ClothingStore.Identity.Application.Features.Commands.Logout;
+global using ClothingStore.Identity.Application.Features.Queries.Me;

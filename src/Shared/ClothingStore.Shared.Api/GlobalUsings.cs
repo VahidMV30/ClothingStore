@@ -1,0 +1,13 @@
+﻿global using System.Diagnostics;
+global using System.Reflection;
+global using Carter;
+global using ClothingStore.Shared.Api.ExceptionHandling;
+global using ClothingStore.Shared.Application;
+global using ClothingStore.Shared.Infrastructure;
+global using ErrorOr;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Diagnostics;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;

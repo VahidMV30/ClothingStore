@@ -1,0 +1,9 @@
+﻿global using System.Linq.Expressions;
+global using ClothingStore.Shared.Application.Interfaces.Repositories;
+global using ClothingStore.Shared.Domain.DDD;
+global using ClothingStore.Shared.Infrastructure.Persistence;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.ChangeTracking;
+global using Microsoft.EntityFrameworkCore.Diagnostics;
+global using Microsoft.Extensions.DependencyInjection;

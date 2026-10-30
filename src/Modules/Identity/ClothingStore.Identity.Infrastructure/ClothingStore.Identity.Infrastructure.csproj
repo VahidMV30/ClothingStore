@@ -6,4 +6,15 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Shared\ClothingStore.Shared.Infrastructure\ClothingStore.Shared.Infrastructure.csproj"/>
+        <ProjectReference Include="..\ClothingStore.Identity.Application\ClothingStore.Identity.Application.csproj"/>
+        <ProjectReference Include="..\ClothingStore.Identity.Domain\ClothingStore.Identity.Domain.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Isopoh.Cryptography.Argon2" Version="2.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.14"/>
+    </ItemGroup>
+
 </Project>
