@@ -1,0 +1,12 @@
+﻿global using ClothingStore.Catalog.Application.Common.DTOs.Categories;
+global using ClothingStore.Catalog.Application.Common.DTOs.Products;
+global using ClothingStore.Catalog.Application.Common.Errors;
+global using ClothingStore.Catalog.Application.Common.Messages;
+global using ClothingStore.Catalog.Application.Interfaces;
+global using ClothingStore.Catalog.Application.Interfaces.Repositories;
+global using ClothingStore.Catalog.Domain.Entities;
+global using ClothingStore.Shared.Application.Common.CQRS;
+global using ClothingStore.Shared.Application.Interfaces.Repositories;
+global using ErrorOr;
+global using FluentValidation;
+global using Mapster;

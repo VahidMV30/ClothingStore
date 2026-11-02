@@ -1,4 +1,4 @@
-﻿namespace ClothingStore.Identity.Application.Common.Constants;
+﻿namespace ClothingStore.Shared.Application.Common.Constants;
 
 public static class ApplicationRoles
 {

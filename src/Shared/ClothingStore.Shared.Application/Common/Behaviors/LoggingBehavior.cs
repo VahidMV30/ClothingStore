@@ -18,7 +18,7 @@ public class LoggingBehavior<TRequest, TResponse>(ILogger<LoggingBehavior<TReque
         if (response is IErrorOr { IsError: true } errorOr)
         {
             var errorCodes = string.Join(", ", errorOr.Errors!.Select(e => e.Code));
-            logger.LogWarning("[FAILED] {Request} - Errors={Errors}", requestName, errorCodes);
+            logger.LogWarning("[FAILED] {Request} - Errors= {Errors}", requestName, errorCodes);
         }
         else
         {

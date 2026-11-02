@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Shared\ClothingStore.Shared.Infrastructure\ClothingStore.Shared.Infrastructure.csproj"/>
+        <ProjectReference Include="..\ClothingStore.Catalog.Application\ClothingStore.Catalog.Application.csproj"/>
+        <ProjectReference Include="..\ClothingStore.Catalog.Domain\ClothingStore.Catalog.Domain.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Persistence\SeedData\*.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

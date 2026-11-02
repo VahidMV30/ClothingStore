@@ -1,0 +1,47 @@
+﻿[
+  {
+    "id": "029C9B32-A171-4AB3-B6E7-146AA4C929D3",
+    "categoryId": "AB65B0F5-A44A-40F3-8E15-16482EE0AEF7",
+    "name": "پیراهن مردانه کد 500",
+    "price": 100000,
+    "quantityInStock": 10,
+    "imageUrl": "/images/shirt.jpg",
+    "description": "این یک توضیح تستی برای محصول پیراهن مردانه کد 500 است."
+  },
+  {
+    "id": "CB377FE4-FAB6-4929-B8A1-A2AA4D9EA38A",
+    "categoryId": "FD3EDF04-9000-4860-A7F1-584370C24E93",
+    "name": "تیشرت زنانه کد 200",
+    "price": 150000,
+    "quantityInStock": 5,
+    "imageUrl": "/images/t-shirt.jpg",
+    "description": "این یک توضیح تستی برای محصول تیشرت زنانه کد 200 است."
+  },
+  {
+    "id": "52ECAED6-5902-4B47-96C1-658CB2BF5B09",
+    "categoryId": "15A1759B-7AD1-4691-977C-7969B443C559",
+    "name": "کت و شلوار مردانه کد 900",
+    "price": 300000,
+    "quantityInStock": 1,
+    "imageUrl": "/images/mens-suit.jpg",
+    "description": "این یک توضیح تستی برای کت و شلوار مردانه کد 900 است."
+  },
+  {
+    "id": "F4E7649E-0518-4661-A53A-46DE8208B583",
+    "categoryId": "6C40840C-112D-4CC4-B240-B22246384426",
+    "name": "شلوار جین زنانه کد 450",
+    "price": 200000,
+    "quantityInStock": 15,
+    "imageUrl": "/images/womens-jeans.jpg",
+    "description": "این یک توضیح تستی برای شلوار جین زنانه کد 450 است."
+  },
+  {
+    "id": "2350E7D6-1F1A-46FA-8579-F63EA26F98BC",
+    "categoryId": "7AE25A63-795F-48A1-BAA5-C9337FA4E405",
+    "name": "هودی بچه گانه کد 350",
+    "price": 180000,
+    "quantityInStock": 2,
+    "imageUrl": "/images/hoodie.jpg",
+    "description": "این یک توضیح تستی برای هودی بچه گانه کد 350 است."
+  }
+]

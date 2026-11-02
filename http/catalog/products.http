@@ -1,0 +1,59 @@
+﻿### Create Product
+# Auth: Required | Role: Admin
+POST http://localhost:5000/api/products
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+{
+  "categoryId": "AB65B0F5-A44A-40F3-8E15-16482EE0AEF7",
+  "name": "پیراهن مردانه کد 700",
+  "price": 100000,
+  "quantityInStock": 10,
+  "imageUrl": "/images/shirt.jpg",
+  "description": "این یک توضیح تستی برای محصول پیراهن مردانه مدل 700 میباشد."
+}
+
+### Update Product
+# Auth: Required | Role: Admin
+PUT localhost:5000/api/products/EA6530C3-8FFC-4D53-8175-15CC6BD06A4C
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+{
+  "categoryId": "AB65B0F5-A44A-40F3-8E15-16482EE0AEF7",
+  "name": "پیراهن مردانه کد 700",
+  "price": 100000,
+  "quantityInStock": 10,
+  "imageUrl": "/images/shirt.jpg",
+  "description": "این یک توضیح تستی برای محصول پیراهن مردانه مدل 700 میباشد."
+}
+
+### Activate Product
+PUT http://localhost:5000/api/products/EA6530C3-8FFC-4D53-8175-15CC6BD06A4C/activate
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+### Deactivate Product
+PUT http://localhost:5000/api/products/EA6530C3-8FFC-4D53-8175-15CC6BD06A4C/deactivate
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+### Increase Quantity
+# Auth: Required | Role: Admin
+PUT http://localhost:5000/api/products/EA6530C3-8FFC-4D53-8175-15CC6BD06A4C/increase
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+{
+  "quantity": 2
+}
+
+### Get Product By Id
+# Auth: Not Required | Role: Not Required
+GET localhost:5000/api/products/EA6530C3-8FFC-4D53-8175-15CC6BD06A4C
+
+### Get All Products
+# Auth: NotRequired | Role: Not Required
+GET localhost:5000/api/products
+
+### Get Products By Category Id
+# Auth: Not Required | Role: Not Required
+GET localhost:5000/api/products/category/15A1759B-7AD1-4691-977C-7969B443C559

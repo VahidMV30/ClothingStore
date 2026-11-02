@@ -2,11 +2,8 @@
 
 public class SecurityServices(IConfiguration configuration, TimeProvider timeProvider) : ISecurityService
 {
-    // public TimeSpan AccessTokenLifetime => TimeSpan.FromMinutes(configuration.GetValue<int>("AuthSettings:Jwt:AccessTokenExpiryInMinutes"));
-    // public TimeSpan RefreshTokenLifetime => TimeSpan.FromDays(configuration.GetValue<int>("AuthSettings:Jwt:RefreshTokenExpiryInDays"));
-
-    public TimeSpan AccessTokenLifetime => TimeSpan.FromMinutes(1);
-    public TimeSpan RefreshTokenLifetime => TimeSpan.FromMinutes(2);
+    public TimeSpan AccessTokenLifetime => TimeSpan.FromMinutes(configuration.GetValue<int>("AuthSettings:Jwt:AccessTokenExpiryInMinutes"));
+    public TimeSpan RefreshTokenLifetime => TimeSpan.FromDays(configuration.GetValue<int>("AuthSettings:Jwt:RefreshTokenExpiryInDays"));
 
     public string HashPassword(string password)
     {

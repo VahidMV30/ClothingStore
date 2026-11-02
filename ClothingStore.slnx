@@ -6,11 +6,21 @@
   <Folder Name="/http/">
     <File Path="http/identity.http" />
   </Folder>
+    <Folder Name="/http/catalog/">
+    <File Path="http/catalog/categories.http" />
+      <File Path="http/catalog/products.http" />
+  </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/Bootstrapper/">
     <Project Path="src/Bootstrapper/ClothingStore.Api/ClothingStore.Api.csproj" />
   </Folder>
   <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Catalog/">
+    <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Api/ClothingStore.Catalog.Api.csproj" />
+    <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Application/ClothingStore.Catalog.Application.csproj" />
+    <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Domain/ClothingStore.Catalog.Domain.csproj" />
+    <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Infrastructure/ClothingStore.Catalog.Infrastructure.csproj" />
+  </Folder>
   <Folder Name="/src/Modules/Identity/">
     <Project Path="src/Modules/Identity/ClothingStore.Identity.Api/ClothingStore.Identity.Api.csproj" />
     <Project Path="src/Modules/Identity/ClothingStore.Identity.Application/ClothingStore.Identity.Application.csproj" />

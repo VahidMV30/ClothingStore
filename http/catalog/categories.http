@@ -1,0 +1,30 @@
+﻿### Create Category
+# Auth: Required | Role: Admin
+POST http://localhost:5000/api/categories
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+{
+  "name": "مانتو",
+  "description": "این یک توضیح تستی برای دسته بندی مانتو است."
+}
+
+### Update Category
+# Auth: Required | Role: Admin
+PUT http://localhost:5000/api/categories/C6BA9A77-AD60-4519-8AF7-A4C1F530EE26
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+{
+  "name": "مانتو تست",
+  "description": "این یک توضیح تستی برای دسته بندی مانتو تست است."
+}
+
+### Get Category By Id
+# Auth: Required | Role: Admin
+GET http://localhost:5000/api/categories/FD3EDF04-9000-4860-A7F1-584370C24E93
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+### Get All Categories
+# Auth: Not Required | Role: Not Required
+GET http://localhost:5000/api/categories

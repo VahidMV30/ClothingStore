@@ -1,0 +1,16 @@
+﻿global using System.Reflection;
+global using ClothingStore.Catalog.Application.Common.DTOs.Categories;
+global using ClothingStore.Catalog.Application.Common.DTOs.Products;
+global using ClothingStore.Catalog.Application.Interfaces;
+global using ClothingStore.Catalog.Application.Interfaces.Repositories;
+global using ClothingStore.Catalog.Domain.Entities;
+global using ClothingStore.Catalog.Infrastructure.Persistence;
+global using ClothingStore.Catalog.Infrastructure.Persistence.Repositories;
+global using ClothingStore.Shared.Infrastructure.Persistence;
+global using ClothingStore.Shared.Infrastructure.Persistence.Interceptors;
+global using ClothingStore.Shared.Infrastructure.Persistence.Repositories;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Diagnostics;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
