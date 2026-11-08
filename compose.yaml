@@ -8,7 +8,13 @@
     image: datalust/seq:latest
     volumes:
       - seq-data:/data
+  
+  rabbitmq:
+    image: rabbitmq:4-management
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
 
 volumes:
   sqlserver-data:
   seq-data:
+  rabbitmq-data:

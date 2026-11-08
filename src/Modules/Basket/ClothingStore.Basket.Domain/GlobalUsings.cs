@@ -1,0 +1,1 @@
+﻿global using ClothingStore.Shared.Domain.DDD;

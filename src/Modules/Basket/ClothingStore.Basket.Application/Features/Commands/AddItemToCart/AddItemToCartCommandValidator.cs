@@ -1,0 +1,13 @@
+﻿namespace ClothingStore.Basket.Application.Features.Commands.AddItemToCart;
+
+public class AddItemToCartCommandValidator : AbstractValidator<AddItemToCartCommand>
+{
+    public AddItemToCartCommandValidator()
+    {
+        RuleFor(x => x.ProductId)
+            .NotEmpty().WithMessage("لطفا شناسه محصول را وارد نمایید.");
+
+        RuleFor(x => x.Quantity)
+            .GreaterThan(0).WithMessage("تعداد باید بیشتر از 0 باشد.");
+    }
+}

@@ -53,12 +53,16 @@ public class Product : Aggregate<Guid>
         imageUrl = imageUrl.Trim();
         description = description.Trim();
 
+        var priceChanged = Price != price;
+
         CategoryId = categoryId;
         Name = name;
         Price = price;
         QuantityInStock = quantityInStock;
         ImageUrl = imageUrl;
         Description = description;
+
+        if (priceChanged) AddDomainEvent(new ProductPriceChangedEvent(Id, Price));
     }
 
     public void IncreaseQuantityInStock(int quantity)
@@ -66,6 +70,14 @@ public class Product : Aggregate<Guid>
         ArgumentOutOfRangeException.ThrowIfNegative(quantity);
 
         QuantityInStock += quantity;
+    }
+
+    public void DecreaseQuantityInStock(int quantity)
+    {
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(quantity);
+        ArgumentOutOfRangeException.ThrowIfGreaterThan(quantity, QuantityInStock);
+
+        QuantityInStock -= quantity;
     }
 
     public void Activate()
@@ -76,5 +88,7 @@ public class Product : Aggregate<Guid>
     public void Deactivate()
     {
         IsActive = false;
+
+        AddDomainEvent(new ProductDeactivatedEvent(Id));
     }
 }

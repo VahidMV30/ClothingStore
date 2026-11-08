@@ -50,4 +50,25 @@ public class ProductsRepository(CatalogDbContext dbContext) : BaseRepository<Gui
                 x.IsActive
             )).ToListAsync(cancellationToken);
     }
+
+    public async Task<List<ProductSummaryResponse>> GetProductsByIdsAsync(List<Guid> productIds, CancellationToken cancellationToken)
+    {
+        return await dbContext.Products
+            .AsNoTracking()
+            .Where(x => productIds.Contains(x.Id))
+            .Select(x => new ProductSummaryResponse(
+                x.Id,
+                x.Name,
+                x.Price,
+                x.QuantityInStock,
+                x.IsActive
+            )).ToListAsync(cancellationToken);
+    }
+
+    public async Task<List<Product>> GetByIdsAsync(List<Guid> productIds, CancellationToken cancellationToken)
+    {
+        return await dbContext.Products
+            .Where(x => productIds.Contains(x.Id))
+            .ToListAsync(cancellationToken);
+    }
 }

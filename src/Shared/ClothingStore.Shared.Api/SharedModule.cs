@@ -2,9 +2,10 @@
 
 public static class SharedModule
 {
-    public static IServiceCollection AddSharedModule(this IServiceCollection services, Assembly[] applicationAssemblies, Assembly[] apiAssemblies)
+    public static IServiceCollection AddSharedModule(this IServiceCollection services, IConfiguration configuration, Assembly[] applicationAssemblies,
+        Assembly[] apiAssemblies, Assembly[] containerAssemblies)
     {
-        services.AddSharedInfrastructure();
+        services.AddSharedInfrastructure(configuration, containerAssemblies);
 
         services.AddSharedApplication(applicationAssemblies);
 

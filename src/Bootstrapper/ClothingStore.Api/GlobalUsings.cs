@@ -1,5 +1,7 @@
 ﻿global using System.Reflection;
+global using ClothingStore.Basket.Api;
 global using ClothingStore.Catalog.Api;
 global using ClothingStore.Identity.Api;
+global using ClothingStore.Ordering.Api;
 global using ClothingStore.Shared.Api;
 global using Serilog;

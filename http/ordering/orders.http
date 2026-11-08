@@ -1,0 +1,9 @@
+﻿### Get My Orders
+# Auth: Required | Role: Any authenticated user
+GET localhost:5000/api/orders/me
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+### Get All Orders
+# Auth: Required | Role: Admin
+GET localhost:5000/api/orders
+Authorization: Bearer {{ACCESS_TOKEN}}

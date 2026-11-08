@@ -1,0 +1,16 @@
+﻿global using Carter;
+global using ClothingStore.Basket.Application.Common.DTOs;
+global using ClothingStore.Basket.Application.Features.Commands.AddItemToCart;
+global using ClothingStore.Basket.Application.Features.Commands.Checkout;
+global using ClothingStore.Basket.Application.Features.Commands.ClearCart;
+global using ClothingStore.Basket.Application.Features.Commands.RemoveCartItem;
+global using ClothingStore.Basket.Application.Features.Commands.UpdateCartItemQuantity;
+global using ClothingStore.Basket.Application.Features.Queries.GetCart;
+global using ClothingStore.Basket.Infrastructure;
+global using ClothingStore.Shared.Api.Extensions;
+global using MediatR;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Routing;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;

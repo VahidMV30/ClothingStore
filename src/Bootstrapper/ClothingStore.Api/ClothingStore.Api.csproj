@@ -23,8 +23,10 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\Modules\Basket\ClothingStore.Basket.Api\ClothingStore.Basket.Api.csproj"/>
         <ProjectReference Include="..\..\Modules\Catalog\ClothingStore.Catalog.Api\ClothingStore.Catalog.Api.csproj"/>
         <ProjectReference Include="..\..\Modules\Identity\ClothingStore.Identity.Api\ClothingStore.Identity.Api.csproj"/>
+        <ProjectReference Include="..\..\Modules\Ordering\ClothingStore.Ordering.Api\ClothingStore.Ordering.Api.csproj"/>
         <ProjectReference Include="..\..\Shared\ClothingStore.Shared.Api\ClothingStore.Shared.Api.csproj"/>
     </ItemGroup>
 

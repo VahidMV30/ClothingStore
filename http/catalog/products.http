@@ -15,7 +15,7 @@ Authorization: Bearer {{ACCESS_TOKEN}}
 
 ### Update Product
 # Auth: Required | Role: Admin
-PUT localhost:5000/api/products/EA6530C3-8FFC-4D53-8175-15CC6BD06A4C
+PUT localhost:5000/api/products/E61CDD19-8C97-4D84-8142-FE7AA434C244
 Content-Type: application/json
 Authorization: Bearer {{ACCESS_TOKEN}}
 
@@ -29,11 +29,11 @@ Authorization: Bearer {{ACCESS_TOKEN}}
 }
 
 ### Activate Product
-PUT http://localhost:5000/api/products/EA6530C3-8FFC-4D53-8175-15CC6BD06A4C/activate
+PUT http://localhost:5000/api/products/1FD31FA9-8068-45D6-A3F8-4603F31984D6/activate
 Authorization: Bearer {{ACCESS_TOKEN}}
 
 ### Deactivate Product
-PUT http://localhost:5000/api/products/EA6530C3-8FFC-4D53-8175-15CC6BD06A4C/deactivate
+PUT http://localhost:5000/api/products/1FD31FA9-8068-45D6-A3F8-4603F31984D6/deactivate
 Authorization: Bearer {{ACCESS_TOKEN}}
 
 ### Increase Quantity

@@ -19,7 +19,6 @@ public static class DependencyInjection
         services.AddSingleton(TimeProvider.System);
         services.AddHttpContextAccessor();
         services.AddScoped<ISecurityService, SecurityServices>();
-        services.AddScoped<ICurrentUser, CurrentUser>();
 
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(o =>

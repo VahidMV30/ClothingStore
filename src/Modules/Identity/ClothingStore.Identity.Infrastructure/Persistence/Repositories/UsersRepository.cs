@@ -13,4 +13,13 @@ public class UsersRepository(IdentityDbContext dbContext) : BaseRepository<Guid,
             .Include(x => x.UserRoles)
             .FirstOrDefaultAsync(x => x.Id == userId, cancellationToken);
     }
+
+    public async Task<List<UserSummaryResponse>> GetUserSummaryByIdsAsync(List<Guid> userIds, CancellationToken cancellationToken)
+    {
+        return await dbContext.Users
+            .AsNoTracking()
+            .Where(x => userIds.Contains(x.Id))
+            .Select(x => new UserSummaryResponse(x.Id, x.FullName, x.Mobile.Value))
+            .ToListAsync(cancellationToken);
+    }
 }

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Shared\ClothingStore.Shared.Application\ClothingStore.Shared.Application.csproj"/>
+        <ProjectReference Include="..\..\..\Shared\ClothingStore.Shared.Contracts\ClothingStore.Shared.Contracts.csproj"/>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+﻿global using ClothingStore.Basket.Application.Common.DTOs;
+global using ClothingStore.Basket.Application.Common.Errors;
+global using ClothingStore.Basket.Application.Common.Messages;
+global using ClothingStore.Basket.Application.Interfaces;
+global using ClothingStore.Basket.Application.Interfaces.Repositories;
+global using ClothingStore.Basket.Contracts.Common.Events;
+global using ClothingStore.Basket.Domain.Entities;
+global using ClothingStore.Catalog.Contracts.Features.Products.Queries.GetProductsByIdsQuery;
+global using ClothingStore.Catalog.Contracts.Features.Products.Queries.GetProductSummaryById;
+global using ClothingStore.Shared.Application.Common.CQRS;
+global using ClothingStore.Shared.Application.Interfaces.Repositories;
+global using ClothingStore.Shared.Application.Interfaces.Services;
+global using ClothingStore.Shared.Contracts.Interfaces;
+global using ErrorOr;
+global using FluentValidation;
+global using Mapster;
+global using MediatR;

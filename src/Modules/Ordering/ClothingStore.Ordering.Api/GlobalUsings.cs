@@ -1,0 +1,11 @@
+﻿global using Carter;
+global using ClothingStore.Ordering.Application.Features.Queries.GetAllOrders;
+global using ClothingStore.Ordering.Application.Features.Queries.GetMyOrders;
+global using ClothingStore.Ordering.Infrastructure;
+global using ClothingStore.Shared.Application.Common.Constants;
+global using MediatR;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Routing;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;

@@ -7,9 +7,7 @@ public class MeQueryHandler(
 {
     public async Task<ErrorOr<UserResponse>> Handle(MeQuery command, CancellationToken cancellationToken)
     {
-        if (currentUser.Id is not { } userId) return AuthErrors.Unauthorized;
-
-        var user = await usersRepository.GetByIdWithRolesAsync(userId, cancellationToken);
+        var user = await usersRepository.GetByIdWithRolesAsync(currentUser.Id, cancellationToken);
 
         if (user is null) return AuthErrors.UserNotFound;
 

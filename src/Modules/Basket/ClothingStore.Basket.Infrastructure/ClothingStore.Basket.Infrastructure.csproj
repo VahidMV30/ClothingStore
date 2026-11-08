@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Shared\ClothingStore.Shared.Infrastructure\ClothingStore.Shared.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Ordering\ClothingStore.Ordering.Contracts\ClothingStore.Ordering.Contracts.csproj"/>
+        <ProjectReference Include="..\ClothingStore.Basket.Application\ClothingStore.Basket.Application.csproj"/>
+        <ProjectReference Include="..\ClothingStore.Basket.Domain\ClothingStore.Basket.Domain.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Persistence\Outbox\"/>
+    </ItemGroup>
+
+</Project>

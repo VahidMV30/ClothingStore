@@ -1,4 +1,4 @@
-﻿### Create Category
+### Create Category
 # Auth: Required | Role: Admin
 POST http://localhost:5000/api/categories
 Content-Type: application/json

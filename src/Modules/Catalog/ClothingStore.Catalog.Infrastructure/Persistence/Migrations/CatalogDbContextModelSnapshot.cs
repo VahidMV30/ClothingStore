@@ -52,6 +52,19 @@ namespace ClothingStore.Catalog.Infrastructure.Persistence.Migrations
                     b.ToTable("Categories", "Catalog");
                 });
 
+            modelBuilder.Entity("ClothingStore.Catalog.Domain.Entities.ProcessedOrder", b =>
+                {
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ProcessedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("ProcessedOrders", "Catalog");
+                });
+
             modelBuilder.Entity("ClothingStore.Catalog.Domain.Entities.Product", b =>
                 {
                     b.Property<Guid>("Id")
@@ -99,6 +112,40 @@ namespace ClothingStore.Catalog.Infrastructure.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("Products", "Catalog");
+                });
+
+            modelBuilder.Entity("ClothingStore.Shared.Infrastructure.Persistence.Outbox.OutboxMessage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Error")
+                        .HasMaxLength(2048)
+                        .HasColumnType("nvarchar(2048)");
+
+                    b.Property<DateTime?>("ProcessedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RetryCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProcessedAt", "CreatedAt");
+
+                    b.ToTable("OutboxMessages", "Catalog");
                 });
 
             modelBuilder.Entity("ClothingStore.Catalog.Domain.Entities.Product", b =>

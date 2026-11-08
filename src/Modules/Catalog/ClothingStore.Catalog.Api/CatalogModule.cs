@@ -6,6 +6,8 @@ public static class CatalogModule
     {
         services.AddCatalogInfrastructure(configuration);
 
+        services.AddCatalogApplication();
+
         return services;
     }
 }

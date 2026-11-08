@@ -1,36 +1,59 @@
 <Solution>
-  <Folder Name="/Solution Items/">
-    <File Path="compose.override.yaml" />
-    <File Path="compose.yaml" />
-  </Folder>
-  <Folder Name="/http/">
-    <File Path="http/identity.http" />
-  </Folder>
+    <Folder Name="/Solution Items/">
+        <File Path="compose.override.yaml" />
+        <File Path="compose.yaml" />
+    </Folder>
+    <Folder Name="/http/">
+        <File Path="http/identity.http" />
+    </Folder>
     <Folder Name="/http/catalog/">
-    <File Path="http/catalog/categories.http" />
-      <File Path="http/catalog/products.http" />
-  </Folder>
-  <Folder Name="/src/" />
-  <Folder Name="/src/Bootstrapper/">
-    <Project Path="src/Bootstrapper/ClothingStore.Api/ClothingStore.Api.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/" />
-  <Folder Name="/src/Modules/Catalog/">
-    <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Api/ClothingStore.Catalog.Api.csproj" />
-    <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Application/ClothingStore.Catalog.Application.csproj" />
-    <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Domain/ClothingStore.Catalog.Domain.csproj" />
-    <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Infrastructure/ClothingStore.Catalog.Infrastructure.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Identity/">
-    <Project Path="src/Modules/Identity/ClothingStore.Identity.Api/ClothingStore.Identity.Api.csproj" />
-    <Project Path="src/Modules/Identity/ClothingStore.Identity.Application/ClothingStore.Identity.Application.csproj" />
-    <Project Path="src/Modules/Identity/ClothingStore.Identity.Domain/ClothingStore.Identity.Domain.csproj" />
-    <Project Path="src/Modules/Identity/ClothingStore.Identity.Infrastructure/ClothingStore.Identity.Infrastructure.csproj" />
-  </Folder>
-  <Folder Name="/src/Shared/">
-    <Project Path="src/Shared/ClothingStore.Shared.Api/ClothingStore.Shared.Api.csproj" />
-    <Project Path="src/Shared/ClothingStore.Shared.Application/ClothingStore.Shared.Application.csproj" />
-    <Project Path="src/Shared/ClothingStore.Shared.Domain/ClothingStore.Shared.Domain.csproj" />
-    <Project Path="src/Shared/ClothingStore.Shared.Infrastructure/ClothingStore.Shared.Infrastructure.csproj" />
-  </Folder>
+        <File Path="http/catalog/categories.http" />
+        <File Path="http/catalog/products.http" />
+    </Folder>
+    <Folder Name="/http/basket/">
+        <File Path="http/basket/carts.http" />
+    </Folder>
+    <Folder Name="/http/ordering/">
+        <File Path="http/ordering/orders.http" />
+    </Folder>
+    <Folder Name="/src/" />
+    <Folder Name="/src/Bootstrapper/">
+        <Project Path="src/Bootstrapper/ClothingStore.Api/ClothingStore.Api.csproj" />
+    </Folder>
+    <Folder Name="/src/Modules/" />
+    <Folder Name="/src/Modules/Basket/">
+        <Project Path="src/Modules/Basket/ClothingStore.Basket.Api/ClothingStore.Basket.Api.csproj" />
+        <Project Path="src/Modules/Basket/ClothingStore.Basket.Application/ClothingStore.Basket.Application.csproj" />
+        <Project Path="src/Modules/Basket/ClothingStore.Basket.Contracts/ClothingStore.Basket.Contracts.csproj" />
+        <Project Path="src/Modules/Basket/ClothingStore.Basket.Domain/ClothingStore.Basket.Domain.csproj" />
+        <Project Path="src/Modules/Basket/ClothingStore.Basket.Infrastructure/ClothingStore.Basket.Infrastructure.csproj" />
+    </Folder>
+    <Folder Name="/src/Modules/Catalog/">
+        <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Api/ClothingStore.Catalog.Api.csproj" />
+        <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Application/ClothingStore.Catalog.Application.csproj" />
+        <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Contracts/ClothingStore.Catalog.Contracts.csproj" />
+        <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Domain/ClothingStore.Catalog.Domain.csproj" />
+        <Project Path="src/Modules/Catalog/ClothingStore.Catalog.Infrastructure/ClothingStore.Catalog.Infrastructure.csproj" />
+    </Folder>
+    <Folder Name="/src/Modules/Identity/">
+        <Project Path="src/Modules/Identity/ClothingStore.Identity.Api/ClothingStore.Identity.Api.csproj" />
+        <Project Path="src/Modules/Identity/ClothingStore.Identity.Application/ClothingStore.Identity.Application.csproj" />
+        <Project Path="src/Modules/Identity/ClothingStore.Identity.Contracts/ClothingStore.Identity.Contracts.csproj" />
+        <Project Path="src/Modules/Identity/ClothingStore.Identity.Domain/ClothingStore.Identity.Domain.csproj" />
+        <Project Path="src/Modules/Identity/ClothingStore.Identity.Infrastructure/ClothingStore.Identity.Infrastructure.csproj" />
+    </Folder>
+    <Folder Name="/src/Modules/Ordering/">
+        <Project Path="src/Modules/Ordering/ClothingStore.Ordering.Api/ClothingStore.Ordering.Api.csproj" />
+        <Project Path="src/Modules/Ordering/ClothingStore.Ordering.Application/ClothingStore.Ordering.Application.csproj" />
+        <Project Path="src/Modules/Ordering/ClothingStore.Ordering.Contracts/ClothingStore.Ordering.Contracts.csproj" />
+        <Project Path="src/Modules/Ordering/ClothingStore.Ordering.Domain/ClothingStore.Ordering.Domain.csproj" />
+        <Project Path="src/Modules/Ordering/ClothingStore.Ordering.Infrastructure/ClothingStore.Ordering.Infrastructure.csproj" />
+    </Folder>
+    <Folder Name="/src/Shared/">
+        <Project Path="src/Shared/ClothingStore.Shared.Api/ClothingStore.Shared.Api.csproj" />
+        <Project Path="src/Shared/ClothingStore.Shared.Application/ClothingStore.Shared.Application.csproj" />
+        <Project Path="src/Shared/ClothingStore.Shared.Contracts/ClothingStore.Shared.Contracts.csproj" />
+        <Project Path="src/Shared/ClothingStore.Shared.Domain/ClothingStore.Shared.Domain.csproj" />
+        <Project Path="src/Shared/ClothingStore.Shared.Infrastructure/ClothingStore.Shared.Infrastructure.csproj" />
+    </Folder>
 </Solution>

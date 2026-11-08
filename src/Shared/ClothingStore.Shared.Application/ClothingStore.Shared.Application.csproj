@@ -14,4 +14,8 @@
         <PackageReference Include="MediatR" Version="14.2.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\ClothingStore.Shared.Contracts\ClothingStore.Shared.Contracts.csproj"/>
+    </ItemGroup>
+
 </Project>

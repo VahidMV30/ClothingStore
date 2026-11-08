@@ -4,6 +4,8 @@ public class CatalogDbContext(DbContextOptions<CatalogDbContext> options) : DbCo
 {
     public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
+    public DbSet<OutboxMessage> OutboxMessages { get; set; }
+    public DbSet<ProcessedOrder> ProcessedOrders { get; set; }
 
     public async Task CommitChangesAsync(CancellationToken cancellationToken)
     {
@@ -17,5 +19,6 @@ public class CatalogDbContext(DbContextOptions<CatalogDbContext> options) : DbCo
         modelBuilder.HasDefaultSchema("Catalog");
 
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        modelBuilder.ApplyConfiguration(new OutboxMessageConfiguration());
     }
 }

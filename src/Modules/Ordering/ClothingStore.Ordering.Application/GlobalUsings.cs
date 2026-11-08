@@ -1,0 +1,12 @@
+﻿global using ClothingStore.Ordering.Application.Common.DTOs;
+global using ClothingStore.Ordering.Application.Interfaces;
+global using ClothingStore.Ordering.Application.Interfaces.Repositories;
+global using ClothingStore.Ordering.Contracts.Common.Events;
+global using ClothingStore.Ordering.Domain.Entities;
+global using ClothingStore.Ordering.Domain.Events;
+global using ClothingStore.Shared.Application.Common.CQRS;
+global using ClothingStore.Shared.Application.Interfaces.Repositories;
+global using ClothingStore.Shared.Application.Interfaces.Services;
+global using ClothingStore.Shared.Contracts.Interfaces;
+global using MediatR;
+global using ClothingStore.Identity.Contracts.Features.Queries.GetUserSummaryById;

@@ -2,6 +2,7 @@
 global using System.Linq.Expressions;
 global using System.Reflection;
 global using ClothingStore.Shared.Application.Common.Behaviors;
+global using ClothingStore.Shared.Contracts.Interfaces;
 global using ErrorOr;
 global using FluentValidation;
 global using MediatR;

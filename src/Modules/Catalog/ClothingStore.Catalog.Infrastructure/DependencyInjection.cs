@@ -4,6 +4,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddCatalogInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddScoped<ISaveChangesInterceptor, DispatchDomainEventInterceptor>();
         services.AddScoped<ISaveChangesInterceptor, AuditableEntityInterceptor>();
 
         services.AddDbContext<CatalogDbContext>((serviceProvider, options) =>
@@ -18,8 +19,14 @@ public static class DependencyInjection
 
         services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<CatalogDbContext>());
 
+        services.AddSingleton(TimeProvider.System);
+
+        services.AddHostedService<OutboxProcessor<CatalogDbContext>>();
+
         services.AddScoped<ICategoriesRepository, CategoriesRepository>();
         services.AddScoped<IProductsRepository, ProductsRepository>();
+        services.AddScoped<IOutboxWriter, OutboxWriter>();
+        services.AddScoped<IProcessedOrdersRepository, ProcessedOrdersRepository>();
 
         return services;
     }

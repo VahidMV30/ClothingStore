@@ -11,6 +11,8 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="MassTransit" Version="8.5.12"/>
+        <PackageReference Include="MassTransit.RabbitMQ" Version="8.5.12"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.14"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.14">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -21,6 +23,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\ClothingStore.Shared.Application\ClothingStore.Shared.Application.csproj"/>
+        <ProjectReference Include="..\ClothingStore.Shared.Contracts\ClothingStore.Shared.Contracts.csproj"/>
         <ProjectReference Include="..\ClothingStore.Shared.Domain\ClothingStore.Shared.Domain.csproj"/>
     </ItemGroup>
 

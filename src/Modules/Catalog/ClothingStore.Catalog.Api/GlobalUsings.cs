@@ -1,4 +1,5 @@
 ﻿global using Carter;
+global using ClothingStore.Catalog.Application;
 global using ClothingStore.Catalog.Application.Common.DTOs.Products;
 global using ClothingStore.Catalog.Application.Features.Categories.Commands.CreateCategory;
 global using ClothingStore.Catalog.Application.Features.Categories.Commands.UpdateCategory;
@@ -9,7 +10,9 @@ global using ClothingStore.Catalog.Application.Features.Products.Commands.Create
 global using ClothingStore.Catalog.Application.Features.Products.Commands.DeactivateProduct;
 global using ClothingStore.Catalog.Application.Features.Products.Commands.IncreaseQuantityInStock;
 global using ClothingStore.Catalog.Application.Features.Products.Commands.UpdateProduct;
+global using ClothingStore.Catalog.Application.Features.Products.Queries.GetAllProducts;
 global using ClothingStore.Catalog.Application.Features.Products.Queries.GetProductById;
+global using ClothingStore.Catalog.Application.Features.Products.Queries.GetProductsByCategoryId;
 global using ClothingStore.Catalog.Infrastructure;
 global using ClothingStore.Shared.Api.Extensions;
 global using ClothingStore.Shared.Application.Common.Constants;
@@ -19,5 +22,3 @@ global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Routing;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
-global using ClothingStore.Catalog.Application.Features.Products.Queries.GetAllProducts;
-global using ClothingStore.Catalog.Application.Features.Products.Queries.GetProductsByCategoryId;

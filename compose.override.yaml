@@ -17,3 +17,12 @@
     ports:
       - "5341:5341"
       - "8081:80"
+  
+  rabbitmq:
+    container_name: clothing-store-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
