@@ -15,3 +15,4 @@ global using ErrorOr;
 global using FluentValidation;
 global using Mapster;
 global using MediatR;
+global using ClothingStore.Basket.Application.Interfaces.Caching;

@@ -4,7 +4,8 @@ public class AddItemToCartCommandHandler(
     ICurrentUser currentUser,
     ICartsRepository cartsRepository,
     IUnitOfWork unitOfWork,
-    ISender sender) : ICommandHandler<AddItemToCartCommand, ErrorOr<CartResponse>>
+    ISender sender,
+    ICartCache cache) : ICommandHandler<AddItemToCartCommand, ErrorOr<CartResponse>>
 {
     public async Task<ErrorOr<CartResponse>> Handle(AddItemToCartCommand command, CancellationToken cancellationToken)
     {
@@ -18,7 +19,7 @@ public class AddItemToCartCommandHandler(
 
         var userId = currentUser.Id;
 
-        var cart = await cartsRepository.GetByUserIdAsync(userId, cancellationToken);
+        var cart = await cartsRepository.GetByUserIdAsync(userId, false, cancellationToken);
 
         var isNewCart = cart is null;
 
@@ -33,6 +34,8 @@ public class AddItemToCartCommandHandler(
         if (isNewCart) await cartsRepository.AddAsync(cart, cancellationToken);
 
         await unitOfWork.CommitChangesAsync(cancellationToken);
+
+        await cache.InvalidateAsync(cart.UserId, cancellationToken);
 
         return cart.Adapt<CartResponse>();
     }

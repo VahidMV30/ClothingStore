@@ -26,3 +26,9 @@
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+  
+  distributedcache:
+    container_name: clothing-store-distributedcache
+    restart: always
+    ports:
+      - "6379:6379"

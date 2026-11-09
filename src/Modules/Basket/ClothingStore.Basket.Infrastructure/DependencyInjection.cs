@@ -19,9 +19,14 @@ public static class DependencyInjection
 
         services.AddSingleton(TimeProvider.System);
 
+        services.AddStackExchangeRedisCache(options => { options.Configuration = configuration.GetConnectionString("Redis") ?? "localhost:6379"; });
+
         services.AddHostedService<OutboxProcessor<BasketDbContext>>();
 
         services.AddScoped<ICartsRepository, CartsRepository>();
+        services.Decorate<ICartsRepository, CachedCartRepository>();
+        services.AddScoped<ICartCache, CartCache>();
+
         services.AddScoped<IOutboxWriter, OutboxWriter>();
 
         return services;

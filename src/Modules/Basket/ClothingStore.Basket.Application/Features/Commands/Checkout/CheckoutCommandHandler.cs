@@ -9,7 +9,7 @@ public class CheckoutCommandHandler(
 {
     public async Task<ErrorOr<Guid>> Handle(CheckoutCommand command, CancellationToken cancellationToken)
     {
-        var cart = await cartsRepository.GetByUserIdAsync(currentUser.Id, cancellationToken);
+        var cart = await cartsRepository.GetByUserIdAsync(currentUser.Id, false, cancellationToken);
 
         if (cart is null) return CartErrors.CartNotFound;
 

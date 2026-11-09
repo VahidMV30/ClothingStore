@@ -13,6 +13,9 @@
     image: rabbitmq:4-management
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
+  
+  distributedcache:
+    image: redis
 
 volumes:
   sqlserver-data:

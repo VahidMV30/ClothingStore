@@ -4,11 +4,12 @@ public class UpdateCartItemQuantityCommandHandler(
     ISender sender,
     ICartsRepository cartsRepository,
     ICurrentUser currentUser,
-    IUnitOfWork unitOfWork) : ICommandHandler<UpdateCartItemQuantityCommand, ErrorOr<CartResponse>>
+    IUnitOfWork unitOfWork,
+    ICartCache cache) : ICommandHandler<UpdateCartItemQuantityCommand, ErrorOr<CartResponse>>
 {
     public async Task<ErrorOr<CartResponse>> Handle(UpdateCartItemQuantityCommand command, CancellationToken cancellationToken)
     {
-        var cart = await cartsRepository.GetByUserIdAsync(currentUser.Id, cancellationToken);
+        var cart = await cartsRepository.GetByUserIdAsync(currentUser.Id, false, cancellationToken);
         if (cart is null) return CartErrors.CartNotFound;
 
         if (cart.Items.All(x => x.ProductId != command.ProductId)) return CartErrors.ProductNotInCart;
@@ -22,6 +23,8 @@ public class UpdateCartItemQuantityCommandHandler(
         cart.UpdateCartItemQuantity(command.ProductId, command.Quantity);
 
         await unitOfWork.CommitChangesAsync(cancellationToken);
+
+        await cache.InvalidateAsync(cart.UserId, cancellationToken);
 
         return cart.Adapt<CartResponse>();
     }

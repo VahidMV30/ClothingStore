@@ -74,4 +74,11 @@ public class Cart : Aggregate<Guid>
 
         item?.UpdatePrice(newPrice);
     }
+
+    public void RestoreItem(Guid id, Guid productId, string productName, decimal unitPrice, int quantity)
+    {
+        var item = CartItem.Create(id, Id, productId, productName, unitPrice, quantity);
+
+        _items.Add(item);
+    }
 }

@@ -7,14 +7,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\Shared\ClothingStore.Shared.Infrastructure\ClothingStore.Shared.Infrastructure.csproj"/>
-        <ProjectReference Include="..\..\Ordering\ClothingStore.Ordering.Contracts\ClothingStore.Ordering.Contracts.csproj"/>
-        <ProjectReference Include="..\ClothingStore.Basket.Application\ClothingStore.Basket.Application.csproj"/>
-        <ProjectReference Include="..\ClothingStore.Basket.Domain\ClothingStore.Basket.Domain.csproj"/>
+        <ProjectReference Include="..\..\..\Shared\ClothingStore.Shared.Infrastructure\ClothingStore.Shared.Infrastructure.csproj" />
+        <ProjectReference Include="..\..\Ordering\ClothingStore.Ordering.Contracts\ClothingStore.Ordering.Contracts.csproj" />
+        <ProjectReference Include="..\ClothingStore.Basket.Application\ClothingStore.Basket.Application.csproj" />
+        <ProjectReference Include="..\ClothingStore.Basket.Domain\ClothingStore.Basket.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Persistence\Outbox\"/>
+        <Folder Include="Persistence\Outbox\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="10.0.14" />
+        <PackageReference Include="Scrutor" Version="7.0.0" />
     </ItemGroup>
 
 </Project>

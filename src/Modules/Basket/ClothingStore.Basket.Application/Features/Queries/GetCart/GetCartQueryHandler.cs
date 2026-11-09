@@ -6,7 +6,7 @@ public class GetCartQueryHandler(
 {
     public async Task<CartResponse> Handle(GetCartQuery query, CancellationToken cancellationToken)
     {
-        var cart = await cartsRepository.GetByUserIdAsync(currentUser.Id, cancellationToken);
+        var cart = await cartsRepository.GetByUserIdAsync(currentUser.Id, true, cancellationToken);
 
         return cart is null ? new CartResponse(Guid.Empty, [], 0) : cart.Adapt<CartResponse>();
     }

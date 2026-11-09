@@ -5,7 +5,7 @@ Content-Type: application/json
 Authorization: Bearer {{ACCESS_TOKEN}}
 
 {
-  "productId": "52ECAED6-5902-4B47-96C1-658CB2BF5B09",
+  "productId": "F4E7649E-0518-4661-A53A-46DE8208B583",
   "quantity": 5
 }
 
@@ -16,7 +16,7 @@ Authorization: Bearer {{ACCESS_TOKEN}}
 
 ### Remove Cart Item
 # Auth: Required | Role: Any authenticated user
-DELETE http://localhost:5000/api/carts/items/029C9B32-A171-4AB3-B6E7-146AA4C929D3
+DELETE http://localhost:5000/api/carts/items/F4E7649E-0518-4661-A53A-46DE8208B583
 Authorization: Bearer {{ACCESS_TOKEN}}
 
 ### Update Cart Item Quantity
