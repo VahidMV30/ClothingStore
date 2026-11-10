@@ -36,5 +36,5 @@ Authorization: Bearer {{ACCESS_TOKEN}}
 
 ### Checkout
 # Auth: Required | Role: Any authenticated user
-POST http://localhost:5000/api/baskets/checkout
+POST http://localhost:5000/api/carts/checkout
 Authorization: Bearer {{ACCESS_TOKEN}}

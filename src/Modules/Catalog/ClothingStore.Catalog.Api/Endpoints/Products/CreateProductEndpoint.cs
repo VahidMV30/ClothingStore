@@ -5,21 +5,23 @@ public class CreateProductEndpoint : ICarterModule
     public void AddRoutes(IEndpointRouteBuilder app)
     {
         app.MapPost("/api/products", async (CreateProductRequest request, ISender sender, CancellationToken cancellationToken) =>
-        {
-            var command = new CreateProductCommand(
-                request.CategoryId,
-                request.Name,
-                request.Price,
-                request.QuantityInStock,
-                request.ImageUrl,
-                request.Description);
+            {
+                var command = new CreateProductCommand(
+                    request.CategoryId,
+                    request.Name,
+                    request.Price,
+                    request.QuantityInStock,
+                    request.ImageUrl,
+                    request.Description);
 
-            var result = await sender.Send(command, cancellationToken);
+                var result = await sender.Send(command, cancellationToken);
 
-            return result.Match(
-                value => Results.Created($"/api/products/{value.Id}", value),
-                errors => errors.ToProblem());
-        }).RequireAuthorization(policy => policy.RequireRole(ApplicationRoles.Admin));
-        ;
+                return result.Match(
+                    value => Results.Created($"/api/products/{value.Id}", value),
+                    errors => errors.ToProblem());
+            })
+            .WithTags("Catalog - Products")
+            .WithSummary("Create a new product. Auth: Required | Role: Admin")
+            .RequireAuthorization(policy => policy.RequireRole(ApplicationRoles.Admin));
     }
 }

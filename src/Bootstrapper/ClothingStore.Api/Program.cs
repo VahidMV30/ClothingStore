@@ -60,7 +60,16 @@ builder.Host.UseSerilog((context, services, configuration) =>
         .ReadFrom.Services(services)
         .Enrich.FromLogContext());
 
+builder.Services.AddOpenApi(options => { options.AddDocumentTransformer<BearerSecuritySchemeTransformer>(); });
+
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+
+    app.UseSwaggerUI(options => { options.SwaggerEndpoint("/openapi/v1.json", "ClothingStore API"); });
+}
 
 app.UseSerilogRequestLogging();
 

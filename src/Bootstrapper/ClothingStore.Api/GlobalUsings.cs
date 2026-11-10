@@ -5,3 +5,7 @@ global using ClothingStore.Identity.Api;
 global using ClothingStore.Ordering.Api;
 global using ClothingStore.Shared.Api;
 global using Serilog;
+global using Microsoft.AspNetCore.Authentication;
+global using Microsoft.AspNetCore.OpenApi;
+global using Microsoft.OpenApi;
+global using ClothingStore.Api;

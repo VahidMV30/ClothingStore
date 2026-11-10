@@ -15,7 +15,6 @@ global using ClothingStore.Shared.Infrastructure.Persistence;
 global using ClothingStore.Shared.Infrastructure.Persistence.Configurations;
 global using ClothingStore.Shared.Infrastructure.Persistence.Interceptors;
 global using ClothingStore.Shared.Infrastructure.Persistence.Outbox;
-global using ClothingStore.Shared.Infrastructure.Persistence.Outbox;
 global using ClothingStore.Shared.Infrastructure.Persistence.Repositories;
 global using MassTransit;
 global using MediatR;

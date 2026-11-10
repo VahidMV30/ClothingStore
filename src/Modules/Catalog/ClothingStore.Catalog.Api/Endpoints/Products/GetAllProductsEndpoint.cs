@@ -5,10 +5,12 @@ public class GetAllProductsEndpoint : ICarterModule
     public void AddRoutes(IEndpointRouteBuilder app)
     {
         app.MapGet("/api/products", async (ISender sender, CancellationToken cancellationToken) =>
-        {
-            var result = await sender.Send(new GetAllProductsQuery(), cancellationToken);
+            {
+                var result = await sender.Send(new GetAllProductsQuery(), cancellationToken);
 
-            return Results.Ok(result);
-        });
+                return Results.Ok(result);
+            })
+            .WithTags("Catalog - Products")
+            .WithSummary("Get all products. Auth: Not required");
     }
 }
